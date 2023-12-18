@@ -19,6 +19,7 @@ class TestUsers(TestBase):
         assert 'support' in data.keys()
 
 
+    # data driven test case
     ids = [1, 2, 5, 8, 10]
     @pytest.mark.parametrize('id', ids)
     def test_view_user_by_multiple_ids(self, id):
