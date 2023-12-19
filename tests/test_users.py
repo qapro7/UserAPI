@@ -96,7 +96,8 @@ class TestUsers(TestBase):
         data = response.json()
         
         assert response.status_code == 200
-        assert data['data']['id'] == 2
+        assert 'name' in data.keys()
+        assert data['name'] == 'morpheus'
        
 
 
