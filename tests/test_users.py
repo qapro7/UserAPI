@@ -16,10 +16,9 @@ class TestUsers(TestBase):
         assert response.status_code == 200
         assert data['data']['id'] == 10
         assert 'data' in data.keys()
-        assert 'support' in data.keys()
+        assert 'support' in data.keys() 
+        assert len(data['support']['url']) > 0
         assert 'email' in data['data'].keys()
-        
-
 
     # data driven test case
     ids = [1, 2, 5, 8, 10]
