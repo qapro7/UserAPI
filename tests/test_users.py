@@ -17,6 +17,7 @@ class TestUsers(TestBase):
         assert data['data']['id'] == 10
         assert 'data' in data.keys()
         assert 'support' in data.keys()
+        assert 'text' in data['support'].keys()
 
 
     # data driven test case
