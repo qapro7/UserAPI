@@ -17,6 +17,8 @@ class TestUsers(TestBase):
         assert data['data']['id'] == 10
         assert 'data' in data.keys()
         assert 'support' in data.keys()
+        assert len(data['data']['avatar'])> 0
+        assert len(data['data']['avatar'])> 0
         assert 'text' in data['support'].keys()
         assert '@' in data['data']['email']
         assert len(data['data']['first_name']) > 0
