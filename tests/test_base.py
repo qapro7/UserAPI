@@ -2,6 +2,6 @@
 # similar to variables we define at collection level in postman
 
 class TestBase:
-    this is base base_url
+   #this is base url 
 
     base_url = 'https://reqres.in/api'
