@@ -17,6 +17,8 @@ class TestUsers(TestBase):
         assert data['data']['id'] == 10
         assert 'data' in data.keys()
         assert 'support' in data.keys()
+        assert 'email' in data['data'].keys()
+        
 
 
     # data driven test case
@@ -74,7 +76,8 @@ class TestUsers(TestBase):
                 print(user['email'])
                 assert 'email' in user.keys()
             
-            current_page += 1
+            current_page += 1`
+            
 
 
 
