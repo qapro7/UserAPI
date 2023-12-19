@@ -76,10 +76,22 @@ class TestUsers(TestBase):
                 print(user['email'])
                 assert 'email' in user.keys()
             
-            current_page += 1`
+            current_page += 1
             
-
-
+    def test_update_user_info(self):
+        endpoint = f'{self.base_url}/users/2'
+        
+        payload = {
+        "name": "morpheus",
+        "job": "zion resident"
+        }
+        
+        response = requests.put(endpoint, json = payload)
+        data = response.json()
+        
+        assert response.status_code == 200
+        assert data['data']['id'] == 2
+       
 
 
 
